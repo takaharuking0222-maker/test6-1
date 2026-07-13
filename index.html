@@ -170,6 +170,19 @@
   }
   .ad-placeholder svg { display: block; width: 100%; height: 100%; }
 
+  @keyframes adCtaPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+  .ad-cta-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: adCtaPulse 1.1s ease-in-out infinite;
+  }
+  .decoy-btn {
+    animation: adCtaPulse 1.1s ease-in-out infinite;
+  }
+
   .close-btn {
     position: absolute;
     width: 34px;
@@ -257,18 +270,24 @@
           <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="adBgA" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#ff9a56"/>
-                <stop offset="100%" stop-color="#ff6b9d"/>
+                <stop offset="0%" stop-color="#ff416c"/>
+                <stop offset="100%" stop-color="#ff9a44"/>
               </linearGradient>
             </defs>
             <rect width="400" height="300" fill="url(#adBgA)"/>
-            <circle cx="200" cy="95" r="42" fill="#ffffff"/>
-            <rect x="178" y="86" width="44" height="36" rx="6" fill="#ff6b9d"/>
-            <path d="M188 86 a12 12 0 0 1 24 0" stroke="#ff6b9d" stroke-width="4" fill="none"/>
-            <text x="200" y="178" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="30" font-weight="700" fill="#ffffff">きらめきモール</text>
-            <text x="200" y="210" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#ffffff">今だけ全品ポイント2倍セール</text>
-            <rect x="150" y="232" width="100" height="34" rx="17" fill="#ffffff"/>
-            <text x="200" y="254" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="15" font-weight="700" fill="#ff6b9d">今すぐチェック</text>
+            <g opacity="0.35">
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(0 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(45 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(90 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(135 200 90)"/>
+            </g>
+            <text x="200" y="100" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="56" font-weight="900" fill="#ffffff" stroke="#c8102e" stroke-width="2">70%OFF</text>
+            <rect x="130" y="112" width="140" height="26" rx="13" fill="#ffffff"/>
+            <text x="200" y="130" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="14" font-weight="700" fill="#ff416c">本日限りの特別価格</text>
+            <text x="200" y="175" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="26" font-weight="700" fill="#ffffff">きらめきモール</text>
+            <text x="200" y="200" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="14" fill="#ffffff">今だけ全品ポイント2倍セール開催中</text>
+            <rect x="140" y="222" width="120" height="38" rx="19" fill="#ffffff" class="ad-cta-pulse"/>
+            <text x="200" y="246" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" font-weight="700" fill="#ff416c">今すぐ購入する</text>
           </svg>
         </div>
         <button class="close-btn standard" data-role="correct-close">×</button>
@@ -279,18 +298,24 @@
           <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="adBgB" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#ff9a56"/>
-                <stop offset="100%" stop-color="#ff6b9d"/>
+                <stop offset="0%" stop-color="#ff416c"/>
+                <stop offset="100%" stop-color="#ff9a44"/>
               </linearGradient>
             </defs>
             <rect width="400" height="300" fill="url(#adBgB)"/>
-            <circle cx="200" cy="95" r="42" fill="#ffffff"/>
-            <rect x="178" y="86" width="44" height="36" rx="6" fill="#ff6b9d"/>
-            <path d="M188 86 a12 12 0 0 1 24 0" stroke="#ff6b9d" stroke-width="4" fill="none"/>
-            <text x="200" y="178" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="30" font-weight="700" fill="#ffffff">きらめきモール</text>
-            <text x="200" y="210" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#ffffff">今だけ全品ポイント2倍セール</text>
-            <rect x="150" y="232" width="100" height="34" rx="17" fill="#ffffff"/>
-            <text x="200" y="254" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="15" font-weight="700" fill="#ff6b9d">今すぐチェック</text>
+            <g opacity="0.35">
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(0 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(45 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(90 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(135 200 90)"/>
+            </g>
+            <text x="200" y="100" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="56" font-weight="900" fill="#ffffff" stroke="#c8102e" stroke-width="2">70%OFF</text>
+            <rect x="130" y="112" width="140" height="26" rx="13" fill="#ffffff"/>
+            <text x="200" y="130" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="14" font-weight="700" fill="#ff416c">本日限りの特別価格</text>
+            <text x="200" y="175" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="26" font-weight="700" fill="#ffffff">きらめきモール</text>
+            <text x="200" y="200" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="14" fill="#ffffff">今だけ全品ポイント2倍セール開催中</text>
+            <rect x="140" y="222" width="120" height="38" rx="19" fill="#ffffff" class="ad-cta-pulse"/>
+            <text x="200" y="246" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" font-weight="700" fill="#ff416c">今すぐ購入する</text>
           </svg>
         </div>
         <button class="close-btn obstruction" data-role="correct-close">×</button>
@@ -301,16 +326,22 @@
           <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="adBgC" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#ff9a56"/>
-                <stop offset="100%" stop-color="#ff6b9d"/>
+                <stop offset="0%" stop-color="#ff416c"/>
+                <stop offset="100%" stop-color="#ff9a44"/>
               </linearGradient>
             </defs>
             <rect width="400" height="300" fill="url(#adBgC)"/>
-            <circle cx="200" cy="95" r="42" fill="#ffffff"/>
-            <rect x="178" y="86" width="44" height="36" rx="6" fill="#ff6b9d"/>
-            <path d="M188 86 a12 12 0 0 1 24 0" stroke="#ff6b9d" stroke-width="4" fill="none"/>
-            <text x="200" y="178" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="30" font-weight="700" fill="#ffffff">きらめきモール</text>
-            <text x="200" y="210" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#ffffff">今だけ全品ポイント2倍セール</text>
+            <g opacity="0.35">
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(0 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(45 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(90 200 90)"/>
+              <rect x="196" y="15" width="8" height="150" fill="#fff44f" transform="rotate(135 200 90)"/>
+            </g>
+            <text x="200" y="100" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="56" font-weight="900" fill="#ffffff" stroke="#c8102e" stroke-width="2">70%OFF</text>
+            <rect x="130" y="112" width="140" height="26" rx="13" fill="#ffffff"/>
+            <text x="200" y="130" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="14" font-weight="700" fill="#ff416c">本日限りの特別価格</text>
+            <text x="200" y="175" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="26" font-weight="700" fill="#ffffff">きらめきモール</text>
+            <text x="200" y="200" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="14" fill="#ffffff">今だけ全品ポイント2倍セール開催中</text>
           </svg>
         </div>
         <button class="decoy-btn" data-role="decoy">同意して進む</button>
@@ -373,11 +404,13 @@
         '初期のスマートフォンは通話とメールが中心でしたが、次第にカメラ性能やアプリの機能が充実し、日常生活のあらゆる場面で使われるようになりました。',
         '特に大きな変化は、常時インターネットに接続できるようになったことです。これにより、いつでもどこでも情報を確認したり、誰かと連絡を取ったりすることが当たり前になりました。',
         'また、キャッシュレス決済や地図アプリ、写真の共有など、スマートフォン一台で完結する日常の作業も年々増えています。財布や地図を持ち歩かなくても外出できる、という人も珍しくなくなりました。',
+        'SNSの普及により、個人が情報を発信することも当たり前になりました。企業だけでなく、個人のクリエイターが活動する場としても、スマートフォンは重要な役割を果たしています。',
+        '教育の現場でも、オンライン授業や学習アプリを通じてスマートフォンやタブレットが活用されるようになり、学び方そのものが変化しつつあります。',
         '一方で、スマートフォンの普及に伴い、広告の表示方法も大きく変化してきました。画面の小ささゆえに、限られたスペースの中でいかに広告を見せるかという工夫が、企業側でも重要な課題になっています。',
         'この後、実際に広告が表示される体験をしていただきます。表示されたら、指示に従って広告を閉じる操作をしてみてください。',
         'これは練習なので、ここでの結果は分析には使用されません。落ち着いて操作方法を確認してください。'
       ],
-      triggerAfter: 4
+      triggerAfter: 6
     },
     1: {
       title: '記事1（ダミータイトルA）地域コミュニティとデジタル化',
@@ -386,11 +419,13 @@
         '従来は回覧板や掲示板が主な情報伝達手段でしたが、これらは伝達に時間がかかったり、住民全員に届きにくいという課題がありました。',
         'デジタルツールを導入することで、情報伝達のスピードが上がるだけでなく、遠方に住む家族とも情報を共有しやすくなるという利点もあります。',
         '実際に、ある地方自治体では住民専用のアプリを導入したところ、イベントへの参加率が上がったという報告もあります。若い世代を中心に、情報を受け取る手段としてアプリを選ぶ人が増えているようです。',
+        '防災の分野でも、デジタル化の効果は大きいとされています。緊急時の避難情報や給水情報などを、アプリを通じて即座に住民へ届けられるようになった地域もあります。',
+        'こうした取り組みは、単なる利便性の向上だけでなく、いざという時に住民の命を守ることにもつながる可能性があります。',
         '一方で、高齢者を中心にデジタル機器の操作に不慣れな人も多く、地域全体での活用にはまだ課題が残っています。',
         'この記事では、実際にどのようなツールが使われているのか、具体例を交えて紹介していきます。',
         '続きを読み進める中で、いくつかの導入事例を見ていきましょう。'
       ],
-      triggerAfter: 4
+      triggerAfter: 6
     },
     2: {
       title: '記事2（ダミータイトルB）健康管理アプリの広がり',
@@ -399,11 +434,13 @@
         '従来は手帳やノートに記録していた健康情報も、今ではアプリが自動で記録し、グラフなどで可視化してくれるようになりました。',
         '特に運動習慣のない人にとっては、日々の歩数や消費カロリーが数字で見えることが、行動を変えるきっかけになっているという調査結果もあります。',
         'また、家族や友人と記録を共有できる機能を使い、お互いに励まし合いながら運動を続けている人もいます。ちょっとした競争心が、継続のモチベーションにつながっているようです。',
+        '睡眠の質を記録する機能も人気があります。眠りの深さや途中で目が覚めた回数などを可視化することで、生活習慣を見直すきっかけになったという声も多く聞かれます。',
+        '医療機関と連携し、記録したデータを診察時に活用する取り組みも一部で始まっており、今後さらに活用の幅が広がると見られています。',
         '一方で、記録すること自体に疲れてしまい、途中でアプリの利用をやめてしまう人も少なくありません。継続のための工夫が求められています。',
         'この記事では、健康管理アプリを長く続けるためのポイントについて紹介していきます。',
         'まずは、多くの人が挫折しやすいポイントから見ていきましょう。'
       ],
-      triggerAfter: 4
+      triggerAfter: 6
     },
     3: {
       title: '記事3（ダミータイトルC）リモートワークの広がり',
@@ -412,11 +449,13 @@
         'これにより通勤時間が削減され、時間を有効に使えるようになったという声がある一方、同僚とのコミュニケーションが取りにくくなったという課題も指摘されています。',
         'オンライン会議ツールやチャットツールの普及によって、離れた場所にいてもある程度の連携は可能になりましたが、対面でのやり取りに比べると伝わる情報量には差があります。',
         '特に新入社員にとっては、雑談の中で得られるような細かな業務知識を吸収する機会が減ってしまうことが課題として挙げられています。企業側もオンボーディングの方法を見直す動きが出てきています。',
+        'オフィスの縮小や、複数の拠点を持たずに済むといったコスト面でのメリットも、企業がリモートワークを導入する理由の一つとして挙げられています。',
+        '一方で、自宅で仕事とプライベートの切り替えが難しく、働きすぎてしまうという新たな課題も浮き彫りになっています。',
         '企業によっては、リモートワークと出社を組み合わせたハイブリッドな働き方を採用し、両方のメリットを活かそうとする動きも見られます。',
         'この記事では、リモートワークをうまく取り入れている企業の工夫について紹介していきます。',
         'それでは、具体的な事例を見ていきましょう。'
       ],
-      triggerAfter: 4
+      triggerAfter: 6
     }
   };
 
